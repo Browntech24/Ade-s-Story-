@@ -1,0 +1,6 @@
+{
+  "name": "Ade Goes to School",
+  "description": "An illustrated interactive short story following young Ade on his memorable first journey to school, featuring chapter narration, cultural glosses, and creative expansions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
