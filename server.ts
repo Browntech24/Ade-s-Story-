@@ -147,4 +147,14 @@ async function startServer() {
   });
 }
 
-startServer();
+// Only listen when this file is the process entry point (local dev / node).
+// On Vercel the app is imported by api/[...path].ts as a serverless handler.
+const isDirectRun =
+  process.argv[1] && path.resolve(process.argv[1]) === __filename;
+const isVercel = Boolean(process.env.VERCEL);
+
+if (isDirectRun && !isVercel) {
+  startServer();
+}
+
+export default app;
